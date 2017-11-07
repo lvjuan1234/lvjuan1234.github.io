@@ -1,243 +1,197 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main">
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2017/11/06/python/" title="python primer" itemprop="url">
+  
+    <h1 itemprop="name">python primer</h1>
+    
+     
+           <p itemprop="description" >python
+Python访问字符串中的值Python访问子字符串，s可以使用方括号来截取字符串，如下实例：
+var1 = ‘Hello World!’var2 = “Python Runoob”
+print “var1[0]: “, var1[0]print “var2[1:5</p>
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-python" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/06/python/" class="article-date">
-  <time datetime="2017-11-06T11:03:23.000Z" itemprop="datePublished">2017-11-06</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/06/python/">python primer</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><ol>
-<li><p>Python访问字符串中的值<br>Python访问子字符串，s可以使用方括号来截取字符串，如下实例：</p>
-<p>var1 = ‘Hello World!’<br>var2 = “Python Runoob”</p>
-<p>print “var1[0]: “, var1[0]<br>print “var2[1:5]: “, var2[1:5]<br>以上实例执行结果：<br>var1[0]:  H<br>var2[1:5]:  ytho</p>
-</li>
-</ol>
-<p>​    2.Python字符串更新<br>你可以对已存在的字符串进行修改，并赋值给另一个变量，如下实例：</p>
-<p>var1 = ‘Hello World!’</p>
-<p>print “更新字符串 :- “, var1[:6] + ‘Runoob!’<br>以上实例执行结果<br>更新字符串 :-  Hello Runoob!</p>
-<p>​     3.删除列表元素<br>可以使用 del 语句来删除列表的的元素，如下实例：</p>
-<p>list1 = [‘physics’, ‘chemistry’, 1997, 2000];</p>
-<p>print list1;<br>del list1[2];<br>print “After deleting value at index 2 : “<br>print list1;<br>以上实例输出结果：<br>[‘physics’, ‘chemistry’, 1997, 2000]<br>After deleting value at index 2 :<br>[‘physics’, ‘chemistry’, 2000]</p>
-<p>​     4.Python列表脚本操作符</p>
-<p>列表对 + 和 <em> 的操作符与字符串相似。+ 号用于组合列表，</em> 号用于重复列表。<br>如下所示：<br>Python 表达式    </p>
-<p>|len([1, 2, 3])    3    长度</p>
-<p>[1, 2, 3] + [4, 5, 6]    [1, 2, 3, 4, 5, 6]    组合<br>[‘Hi!’] * 4    [‘Hi!’, ‘Hi!’, ‘Hi!’, ‘Hi!’]    重复<br>3 in [1, 2, 3]    True    元素是否存在于列表中<br>for x in [1, 2, 3]: print x,    1 2 3    迭代</p>
-<p>5.Python列表截取<br>Python 的列表截取实例如下：</p>
-<p>L = [‘Google’, ‘Runoob’, ‘Taobao’]<br>L[2]<br>‘Taobao’<br>L[-2]<br>‘Runoob’<br>L[1:]<br>[‘Runoob’, ‘Taobao’]</p>
-<p>描述：<br>Python 表达式    结果    描述<br>L[2]    ‘Taobao’    读取列表中第三个元素<br>L[-2]    ‘Runoob’    读取列表中倒数第二个元素<br>L[1:][‘Runoob’, ‘Taobao’]    从第二个元素开始截取列表</p>
-<p>6.元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。<br>如下实例：<br>tup1 = (‘physics’, ‘chemistry’, 1997, 2000);<br>tup2 = (1, 2, 3, 4, 5 );<br>tup3 = “a”, “b”, “c”, “d”;</p>
-<p>7.元组与字符串类似，下标索引从0开始，可以进行截取，组合等。</p>
-<p>8.修改字典<br>向字典添加新内容的方法是增加新的键/值对，修改或删除已有键/值对如</p>
-<p>dict = {‘Name’: ‘Zara’, ‘Age’: 7, ‘Class’: ‘First’};</p>
-<p>dict[‘Age’] = 8; # update existing entry<br>dict[‘School’] = “DPS School”; # Add new entry</p>
-<p>print “dict[‘Age’]: “, dict[‘Age’];<br>print “dict[‘School’]: “, dict[‘School’];</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/python/" data-id="cj9o42rbc000070nvndrrzyzm" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第一个博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/04/第一个博客/" class="article-date">
-  <time datetime="2017-11-04T13:46:26.437Z" itemprop="datePublished">2017-11-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一个博客"><a href="#第一个博客" class="headerlink" title="第一个博客"></a>第一个博客</h1><h1 id="我"><a href="#我" class="headerlink" title="我"></a>我</h1><p>lü’juan</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/04/第一个博客/" data-id="cj9o42rbs000170nvptkv2ee6" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <time datetime="2017-11-06T11:03:23.000Z" itemprop="datePublished">2017-11-06</time>
+  </a>
 </section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2017/11/04/第一个博客/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
+    
+     
+           <p itemprop="description" >第一个博客我lü’juan</p>
         
-          <aside id="sidebar">
-  
     
+    <time datetime="2017-11-04T13:46:26.437Z" itemprop="datePublished">2017-11-04</time>
+  </a>
+</section>
+
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-  </div>
-
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/python/" style="font-size: 10px;">python</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
-    </div>
-  </div>
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+		
+		</ul>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/11/06/python/">python primer</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/04/第一个博客/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS</a>
+</div>
 
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+</div>
     </div>
-  </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="http://yoursite.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
-</body>
-</html>
+
+  </body>
+ </html>
