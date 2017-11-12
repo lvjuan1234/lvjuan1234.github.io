@@ -1,0 +1,358 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="title:python
+date:2017-11-11
+tages:python part 1
+
+廖雪峰python
+python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了，心里没谱啊，前两次的笔记都忘保存，狂躁。。算了，反正前两次笔记也是粘贴复制，周日花挺长时间确定python目标，决定">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/11/12/python 爬虫：/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="John Doe">John Doe</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2017-11-12T14:46:56.575Z" itemprop="datePublished">2017-11-12</time>
+    Updated:<time datetime="2017-11-12T14:04:02.983Z" itemprop="dateModified">2017-11-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-爬虫："><span class="toc-number">1.</span> <span class="toc-text">python 爬虫：</span></a></li></ol>
+		</div>
+		
+		<p>title:python</p>
+<p>date:2017-11-11</p>
+<p>tages:python part 1</p>
+<hr>
+<p><a href="https://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰python</a></p>
+<p>python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了，心里没谱啊，前两次的笔记都忘保存，狂躁。。算了，反正前两次笔记也是粘贴复制，周日花挺长时间确定python目标，决定直接上路写爬虫，边写边学python,我的博客应该只有田茜文一个人看，我就用自己的理解写啦，若有错误，请大佬说啦啦，写这么多，就为了发牢骚和练手速。</p>
+<h1 id="python-爬虫："><a href="#python-爬虫：" class="headerlink" title="python 爬虫："></a><a href="http://blog.csdn.net/column/details/python3-spider.html" target="_blank" rel="external">python 爬虫</a>：</h1><p>思路先http协议，简单了解哈,再学python库（requests[负责连接网站，返回网页],Xpath[解析网站，来抽取数据]),还有URLError处理,①先由urllib的request打开Url得到网页html文档 ②浏览器打开网页源代码分析元素节点 ③通过Beautiful Soup或则正则表达式提取想要的数据 ④存储数据到本地磁盘或数据库（抓取，分析，存储）</p>
+<p>urllib.request（或者requests） 用来访问网页。<br>BeautifulSoup 用来从网页结构中定位自己想要的内容，并获取到<br>会了上面的两个库，一般的不需要登录验证的小网站你都能爬了。而抓登录验证的网站就需要用到Selenium</p>
+<ol>
+<li><p><a href="https://www.cnblogs.com/ranyonsue/p/5984001.html" target="_blank" rel="external">http 协议</a>：自认为重要是URL定义（用于查找某个资源的足够的信息，包括协议部分，域名部分。）和Request请求消息(请求行以一个方法符号开头，以空格分开，后面跟着请求的URI和协议的版本).和post,Get(GET一般用于获取/查询资源信息，而POST一般用于更新资源信息,GET提交的数据大小有限制而POST方法提交的数据没有限制,GET方式提交数据，会带来安全问题)</p>
+</li>
+<li><p>python相关的包：<a href="http://cuiqingcai.com/947.html" target="_blank" rel="external">urlib</a>,request,scrapy,pyspider。。<a href="http://blog.csdn.net/iloveyin/article/details/21444613" target="_blank" rel="external">request</a>比urllib较方便些，<a href="http://blog.csdn.net/shanzhizi/article/details/50903748" target="_blank" rel="external">request</a>基于 urllib,安装通过<a href="http://blog.csdn.net/olanlanxiari/article/details/48086917" target="_blank" rel="external">pip</a>（pip 是一个Python包管理工具，主要是用于安装 <a href="https://zhidao.baidu.com/question/1895064618609388100.html" target="_blank" rel="external">PyPI</a> 上的软件包，可以替代 easy_install 工具）</p>
+<ul>
+<li>request可以发送网络请求</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; import requests</div><div class="line">&gt;&gt;&gt; r = requests.get(&apos;https://github.com/timeline.json&apos;)</div></pre></td></tr></table></figure>
+<p>这个对象中获取所有我们想要的信息</p>
+<p>其他不同API的HTTP请求类型： POST，PUT， DELETE， HEAD以及OPTIONS</p>
+<ul>
+<li><p>为URL的查询字符传递某种数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; payload = &#123;&apos;key1&apos;: &apos;value1&apos;, &apos;key2&apos;: &apos;value2&apos;&#125;</div><div class="line">&gt;&gt;&gt; r = requests.get(&quot;http://httpbin.org/get&quot;, params=payload)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>读取服务器响应的内容</p>
+</li>
+<li><p>请求添加HTTP头部，只要简单地传递一个 dict 给 headers 参数</p>
+<p>3.URLError:try-except语句来包围并捕获相应的异常,加入 hasattr属性提前对属性进行判断</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import urllib2</div><div class="line"> </div><div class="line">req = urllib2.Request(&apos;http://blog.csdn.net/cqcre&apos;)</div><div class="line">try:</div><div class="line">    urllib2.urlopen(request)</div><div class="line">except urllib2.URLError, e:</div><div class="line">    if hasattr(e,&quot;reason&quot;):</div><div class="line">        print e.reason</div><div class="line">else:</div><div class="line">    print &quot;OK&quot;</div></pre></td></tr></table></figure>
+<p>urllib2是python自带的模块，不需要下载。<br>urllib2在python3.x中被改为urllib.request</p>
+<p>3.第一个示例：简单的网页爬虫 </p>
+</li>
+</ul>
+<pre><code>    爬取豆瓣首页 
+
+    import urllib.request  
+
+    #网址  
+    url = &quot;http://www.douban.com/&quot;  
+
+    #请求  
+    request = urllib.request.Request(url)  
+
+    #爬取结果  
+    response = urllib.request.urlopen(request)  
+
+    data = response.read()  
+
+    #设置解码方式  
+    data = data.decode(&apos;utf-8&apos;)  
+
+    #打印结果  
+    print(data)  
+
+    #打印爬取网页的各类信息  
+
+    print(type(response))  
+    print(response.geturl())  
+    print(response.info())  
+    print(response.getcode())  
+- 利用urlopen()方法可以实现最基本请求的发起，但这几个简单的参数并不足以
+  构建一个完整的请求，如果请求中需要加入headers（请求头）等信息，我们就可以利用更强大的Request类来构建一个请求。
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">req = urllib.request.Request(url)</div><div class="line">response = urllib.request.urlopen(req)</div><div class="line">#用Request类构建了一个完整的请求，增加了headers等一些信息</div></pre></td></tr></table></figure>
+
+  代替：
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response = urllib.request.urlopen(url)</div></pre></td></tr></table></figure>
+
+  - date的数据格式为bytes类型，需要decode（）解码，转换成str类型。
+  -  data：Post提交的数据,  read() , readline() ,readlines() , fileno() , close() ：对HTTPResponse类型数据进行操作,  info()：返回HTTPMessage对象，表示远程服务器返回的头信息,  getcode()：返回Http状态码。如果是http请求，200请求成功完成;404网址未找到,  geturl()：返回请求的url.
+
+  ​       
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2017/11/12/python 爬虫：/" data-title="Hexo" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/11/12/Vim/" title="">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-爬虫："><span class="toc-number">1.</span> <span class="toc-text">python 爬虫：</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="http://yoursite.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
