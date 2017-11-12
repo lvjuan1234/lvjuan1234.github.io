@@ -10,11 +10,11 @@
     <meta name="author" content="John Doe">
     
     <meta name="description" content="title:python
-date:2017-11-11
+date:2017-11-11 00:00:00
 tages:python part 1
 
 廖雪峰python
-python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了，心里没谱啊，前两次的笔记都忘保存，狂躁。。算了，反正前两次笔记也是粘贴复制，周日花挺长时间确定python目标，决定">
+python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了，心里没谱啊，前两次的笔记都忘保存，狂躁。。算了，反正前两次笔记也是粘贴复制，周日花挺长时间确定py">
     
     
     
@@ -78,7 +78,7 @@ python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了�
     </p>
   <p class="article-time">
     <time datetime="2017-11-12T14:46:56.575Z" itemprop="datePublished">2017-11-12</time>
-    Updated:<time datetime="2017-11-12T14:04:02.983Z" itemprop="dateModified">2017-11-12</time>
+    Updated:<time datetime="2017-11-12T14:52:17.195Z" itemprop="dateModified">2017-11-12</time>
     
   </p>
 </header>
@@ -91,7 +91,7 @@ python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了�
 		</div>
 		
 		<p>title:python</p>
-<p>date:2017-11-11</p>
+<p>date:2017-11-11 00:00:00</p>
 <p>tages:python part 1</p>
 <hr>
 <p><a href="https://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰python</a></p>
@@ -119,10 +119,10 @@ python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了�
 <li><p>读取服务器响应的内容</p>
 </li>
 <li><p>请求添加HTTP头部，只要简单地传递一个 dict 给 headers 参数</p>
-<p>3.URLError:try-except语句来包围并捕获相应的异常,加入 hasattr属性提前对属性进行判断</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import urllib2</div><div class="line"> </div><div class="line">req = urllib2.Request(&apos;http://blog.csdn.net/cqcre&apos;)</div><div class="line">try:</div><div class="line">    urllib2.urlopen(request)</div><div class="line">except urllib2.URLError, e:</div><div class="line">    if hasattr(e,&quot;reason&quot;):</div><div class="line">        print e.reason</div><div class="line">else:</div><div class="line">    print &quot;OK&quot;</div></pre></td></tr></table></figure>
-<p>urllib2是python自带的模块，不需要下载。<br>urllib2在python3.x中被改为urllib.request</p>
-<p>3.第一个示例：简单的网页爬虫 </p>
+<p>   3.URLError:try-except语句来包围并捕获相应的异常,加入 hasattr属性提前对属性进行判断</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import urllib2</div><div class="line"> </div><div class="line">req = urllib2.Request(&apos;http://blog.csdn.net/cqcre&apos;)</div><div class="line">try:</div><div class="line">    urllib2.urlopen(request)</div><div class="line">except urllib2.URLError, e:</div><div class="line">    if hasattr(e,&quot;reason&quot;):</div><div class="line">        print e.reason</div><div class="line">else:</div><div class="line">    print &quot;OK&quot;</div></pre></td></tr></table></figure>
+<p>   urllib2是python自带的模块，不需要下载。<br>   urllib2在python3.x中被改为urllib.request</p>
+<p>   3.第一个示例：简单的网页爬虫 </p>
 </li>
 </ul>
 <pre><code>    爬取豆瓣首页 
@@ -157,9 +157,11 @@ python 廖雪峰课程看了，总发现学完新东西，旧的东西就忘了�
 
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">req = urllib.request.Request(url)</div><div class="line">response = urllib.request.urlopen(req)</div><div class="line">#用Request类构建了一个完整的请求，增加了headers等一些信息</div></pre></td></tr></table></figure>
 
+
   代替：
 
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response = urllib.request.urlopen(url)</div></pre></td></tr></table></figure>
+
 
   - date的数据格式为bytes类型，需要decode（）解码，转换成str类型。
   -  data：Post提交的数据,  read() , readline() ,readlines() , fileno() , close() ：对HTTPResponse类型数据进行操作,  info()：返回HTTPMessage对象，表示远程服务器返回的头信息,  getcode()：返回Http状态码。如果是http请求，200请求成功完成;404网址未找到,  geturl()：返回请求的url.
