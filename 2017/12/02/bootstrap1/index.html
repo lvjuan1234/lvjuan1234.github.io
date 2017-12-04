@@ -1,0 +1,346 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="title:bootstrap
+data:2017-12-2
+tages:bootstrap
+
+
+让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，需要在网页的 head 之中添加 viewport meta 标签
+1&amp;lt;meta name=&amp;quot;viewport">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/12/02/bootstrap1/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="John Doe">John Doe</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2017-12-02T11:53:28.012Z" itemprop="datePublished">2017-12-02</time>
+    Updated:<time datetime="2017-12-03T06:58:14.546Z" itemprop="dateModified">2017-12-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+		</div>
+		
+		<p>title:bootstrap</p>
+<p>data:2017-12-2</p>
+<p>tages:bootstrap</p>
+<hr>
+<ol>
+<li><p>让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，需要在网页的 head 之中添加 viewport meta 标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>使用 BootCDN 上的库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!-- 新 Bootstrap 核心 CSS 文件 --&gt;</div><div class="line">&lt;link href=&quot;https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</div><div class="line"> </div><div class="line">&lt;!-- 可选的Bootstrap主题文件（一般不使用） --&gt;</div><div class="line">&lt;script src=&quot;https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css&quot;&gt;&lt;/script&gt;</div><div class="line"> </div><div class="line">&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;</div><div class="line">&lt;script src=&quot;https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line"> </div><div class="line">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</div><div class="line">&lt;script src=&quot;https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>3.添加 <em>img-responsive</em> class 可以让 Bootstrap 3 中的图像对响应式布局的支持更友好</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;...&quot; class=&quot;img-responsive&quot; alt=&quot;响应式图像&quot;&gt;</div><div class="line"></div><div class="line">.img-responsive &#123;</div><div class="line">  display: block;</div><div class="line">  height: auto;</div><div class="line">  max-width: 100%;</div><div class="line">&#125;</div><div class="line">让使用了 .img-responsive 类的图片水平居中，请使用 .center-block 类，不要用 .text-center。</div></pre></td></tr></table></figure>
+<p>4.使用 <em>body {margin: 0;}</em> 来移除 body 的边距</p>
+<p>5.Bootstrap 3 的 <em>container</em> class 用于包裹页面上的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  ...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container &#123;</div><div class="line">   padding-right: 15px;</div><div class="line">   padding-left: 15px;</div><div class="line">   margin-right: auto;</div><div class="line">   margin-left: auto;</div><div class="line">&#125;</div><div class="line">.container:before,</div><div class="line">.container:after &#123;</div><div class="line">  display: table;</div><div class="line">  content: &quot; &quot;;</div><div class="line">&#125;</div><div class="line">.container:before,</div><div class="line">.container:after &#123;</div><div class="line">  display: table;</div><div class="line">  content: &quot; &quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>6.Bootstrap 3 CSS 有一个申请响应的媒体查询，在不同的媒体查询阈值范围内都为 container 设置了max-width，用以匹配网格系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media (min-width: 768px) &#123;</div><div class="line">   .container &#123;</div><div class="line">      width: 750px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>7.响应式网格系统随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。</p>
+<ul>
+<li><p>行必须放置在 <strong>.container</strong> class 内，以便获得适当的对齐（alignment）和内边距（padding）。</p>
+</li>
+<li><p>使用行来创建列的水平组。</p>
+</li>
+<li><p>网格系统是通过指定您想要横跨的十二个可用的列来创建的。例如，要创建三个相等的列，则使用三个 <strong>.col-xs-4</strong>。</p>
+</li>
+<li><p>.col-xs- 超小屏幕 手机 (&lt;768px)</p>
+<p>.col-sm- 小屏幕 平板 (≥768px)</p>
+<p>.col-md- 中等屏幕 桌面显示器 (≥992px)</p>
+<p>.col-lg- 大屏幕 大桌面显示器 (≥1200px)</p>
+</li>
+<li><p><div class="col-md-6">..</div>，我们将使用 <strong>.col-md-offset-3</strong> class 来居中这个 div。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;col-xs-6 col-md-offset-3&quot; </div><div class="line">        style=&quot;background-color: #dedef8;box-shadow: </div><div class="line">        inset 1px -1px 1px #444, inset -1px 1px 1px #444;&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>嵌套默认的网格，请添加一个新的 <strong>.row</strong>，并在一个已有的 <strong>.col-md-*</strong> 列内添加一组 <strong>.col-md-*</strong> 列。被嵌套的行应包含一组列，这组列个数不能超过12</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;h1&gt;Hello, world!&lt;/h1&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;</div><div class="line">    &lt;div class=&quot;col-md-3&quot; style=..&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;col-md-9..      &lt;!--row,再在新的行分12列--！》</div><div class="line">    &lt;div class=&quot;row&quot;&gt;</div><div class="line">                &lt;div class=&quot;col-md-6&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>8创建可折叠的分组或折叠面板</p>
+<ol>
+<li><p><strong>data-toggle=”collapse”</strong> 添加到您想要展开或折叠的组件的链接上。</p>
+</li>
+<li><p><strong>href</strong> 或 <strong>data-target</strong> 属性添加到父组件，它的值是子组件的 <em>id</em>。</p>
+</li>
+<li><p><strong>data-parent</strong> 属性把折叠面板（accordion）的 id 添加到要展开或折叠的组件的链接上。</p>
+<p>9.通过以下两种方式启用标签页：</p>
+<ul>
+<li><p><strong>通过 data 属性</strong>：您需要添加 <strong>data-toggle=”tab”</strong> 或 <strong>data-toggle=”pill”</strong> 到锚文本链接中。        添加 <strong>nav</strong> 和 <strong>nav-tabs</strong> 类到 <strong>ul</strong> 中，将会应用 Bootstrap <a href="http://www.runoob.com/bootstrap/bootstrap-navigation-elements.html" target="_blank" rel="external">标签样式</a>，添加 <strong>nav</strong> 和 <strong>nav-pills</strong> 类到 <strong>ul</strong> 中</p>
+<p>10.下拉菜单（Dropdown）插件</p>
+<ul>
+<li><p><strong>通过 data 属性</strong>：向链接或按钮添加 <strong>data-toggle=”dropdown”</strong> 来切换下拉菜单</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2017/12/02/bootstrap1/" data-title="Hexo" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/12/02/微信小程序/"  title="">
+ <strong>NEXT:</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="http://yoursite.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
