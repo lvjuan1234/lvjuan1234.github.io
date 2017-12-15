@@ -9,15 +9,17 @@
     
     <meta name="author" content="John Doe">
     
-    <meta name="description" content="title:微信小程序
+    <meta name="description" content="title:AJAX
 date:2017-12-10
 
 
-运行python 代码，与数据库交互，对数据增删改插
-微信公众平台,找到设置,开发设置,APP ID,再打开微信开发工具
-app.js是小程序的初始化脚本，可以在这个文件中监听小程序的生命周期，申请全局变量和调用API等
+AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。
 
-​       ">
+AJAX = 异步 JavaScript 和 XML。
+
+XMLHttpRequest 是 AJAX 的基础
+
+XMLHttpRequest 用于">
     
     
     
@@ -73,15 +75,15 @@ app.js是小程序的初始化脚本，可以在这个文件中监听小程序�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/12/02/微信小程序/" title="" itemprop="url"></a>
+      <a href="/2017/12/15/AJAX/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="John Doe">John Doe</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-12-02T09:16:22.282Z" itemprop="datePublished">2017-12-02</time>
-    Updated:<time datetime="2017-12-10T05:49:31.225Z" itemprop="dateModified">2017-12-10</time>
+    <time datetime="2017-12-15T09:32:33.959Z" itemprop="datePublished">2017-12-15</time>
+    Updated:<time datetime="2017-12-15T09:32:35.435Z" itemprop="dateModified">2017-12-15</time>
     
   </p>
 </header>
@@ -93,59 +95,43 @@ app.js是小程序的初始化脚本，可以在这个文件中监听小程序�
 		
 		</div>
 		
-		<p>title:微信小程序</p>
+		<p>title:AJAX</p>
 <p>date:2017-12-10</p>
 <hr>
 <ol>
-<li>运行python 代码，与数据库交互，对数据增删改插</li>
-<li><a href="https://mp.weixin.qq.com/wxopen/initprofile?action=home&amp;lang=zh_CN&amp;token=1013789109" target="_blank" rel="external">微信公众平台</a>,找到设置,开发设置,APP ID,再打开微信开发工具</li>
-<li>app.js是小程序的初始化脚本，可以在这个文件中监听小程序的生命周期，申请全局变量和调用API等</li>
-</ol>
-<p>​       app.json是对小程序的全局配置，<strong>pages设置页面路径组成（默认第一条为首页），window设置默认页面的窗口表现等</strong></p>
-<p>　   app.wxss 是整个小程序的公共样式表。<strong>类似网站开发中的common.css</strong></p>
-<p>  4.创建页面：在pages目录下，由一个文件夹中的四个同名不同类型文件组成。<strong>.js是脚本文件，.json是配置文件，.wxss是样式表文件，.wxml是页面结构文件</strong>，其中json和wxss文件为非必须（<strong>默认会继承app的json和wxss默认设置</strong>）。</p>
-<p>5.页面的结构（wxml）、样式（wxss）、逻辑（js）和配置（json）</p>
-<p>小程序中的wxml摒弃了HTML标签， 改用view（类似div）、text（类似span）、icon等等，class同html指定样式，bindtap绑定事件（类似onclick），该页面无特殊配置，json文件内容为空（非必须文件）</p>
-<p>6.跳转页面</p>
+<li><p>AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</p>
+</li>
+<li><p>AJAX = 异步 JavaScript 和 XML。</p>
+</li>
+<li><p>XMLHttpRequest 是 AJAX 的基础</p>
 <ul>
-<li><p>首先先新建一个<a href="http://blog.csdn.net/michael_ouyang/article/details/54923311" target="_blank" rel="external">test页面</a></p>
-<p>1&gt; 必须要创建一个wxml文件和一个js文件，并且文件名要同名（例：test.wxml 和 test.js）。<br>2&gt; js文件内，需要写上注册页面的Page()函数！<br>3&gt; 并且要到app.json文件中，注册新建页面的路径信息。</p>
-<p>1.新建了一个test.js文件和一个test.wxml文件，</p>
-<p>以及在app.json文件内的”pages”数组内，放在第一个的页面，就是程序启动时，第一个所打开的页面。</p>
-<p>2.在test.js文件中，必须要有一个Page()函数</p>
-<p>3.在wxml文件内，随便写一点内容（否则打开空白页，你都不知道是否成功运行项目）</p>
-<p>//index.js</p>
-<p>//获取应用实例</p>
-<p>var app = getApp()</p>
-<p>Page({</p>
-<p>  data:{…</p>
-<p>  },changeToTest:function(){</p>
-<p>​    wx.navigateTo({</p>
-<p>​    url:’../test/test’</p>
-<p>​    })</p>
-<p>  },</p>
-<p>  onload: function(){…</p>
-<p>}</p>
-<p>})</p>
-<!--index.wxml-->
-<button blindtap="changeToTest">点击</button>
-
-<p>var app = getApp()</p>
-<p>Page({</p>
-<p>  data: {…</p>
-<p>  },</p>
-<p>  changeToTest: function () {</p>
-<p>​    wx.navigateTo({</p>
-<p>​      url: ‘../test/test’</p>
-<p>​      })</p>
-<p>  },</p>
-<p>  onload: function () {…</p>
-<p>  }</p>
-<p>})</p>
+<li><p>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新</p>
+</li>
+<li><p>创建 XMLHttpRequest 对象的语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable=new XMLHttpRequest();</div></pre></td></tr></table></figure>
+</li>
+<li><p>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;ajax_info.txt&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过 GET 方法发送信息，请向 URL 添加信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/demo_get2.php?fname=Henry&amp;lname=Ford&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure>
+<ul>
+<li><p>POST 请求：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">xmlhttp.open(&quot;POST&quot;,&quot;/try/ajax/demo_post.php&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure>
+<p>4.获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
+<p>5.AJAX 可用来与数据库进行动态通信。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function showCustomer(str)</div><div class="line">&#123;</div><div class="line">  var xmlhttp;    </div><div class="line">  if (str==&quot;&quot;)</div><div class="line">  &#123;</div><div class="line">    document.getElementById(&quot;txtHint&quot;).innerHTML=&quot;&quot;;</div><div class="line">    return;</div><div class="line">  &#125;</div><div class="line">  if (window.XMLHttpRequest)</div><div class="line">  &#123;</div><div class="line">    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</div><div class="line">    xmlhttp=new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">  else</div><div class="line">  &#123;</div><div class="line">    // IE6, IE5 浏览器执行代码</div><div class="line">    xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">  &#125;</div><div class="line">  xmlhttp.onreadystatechange=function()</div><div class="line">  &#123;</div><div class="line">    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)</div><div class="line">    &#123;</div><div class="line">      document.getElementById(&quot;txtHint&quot;).innerHTML=xmlhttp.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/getcustomer.php?q=&quot;+str,true);</div><div class="line">  xmlhttp.send();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>执行名为 “showCustomer()” 的函数。该函数由 “onchange” 事件触发</p>
+<p>6.用 AJAX 来读取来自 XML 文件的信息：</p>
+<p>如：当服务器响应就绪时，会构建一个 HTML 表格，从 XML 文件中提取节点（元素），最后使用 XML 数据的 填充 id=”demo”  的表格元素</p>
 <p>​</p>
 <p>​</p>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -155,7 +141,7 @@ app.js是小程序的初始化脚本，可以在这个文件中监听小程序�
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/12/02/微信小程序/" data-title="Hexo" data-tsina="" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/12/15/AJAX/" data-title="Hexo" data-tsina="" class="share clearfix">
   </div>
 
 </div>
@@ -164,17 +150,9 @@ app.js是小程序的初始化脚本，可以在这个文件中监听小程序�
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/12/02/bootstrap1/" title="">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  (no title)</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/11/19/问题/"  title="">
+<a href="/2017/12/15/bootstrap个人空间页面/"  title="">
  <strong>NEXT:</strong><br/> 
  <span>(no title)
 </span>
